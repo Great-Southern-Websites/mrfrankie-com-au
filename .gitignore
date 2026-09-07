@@ -1,0 +1,8 @@
+target/
+.source/
+BRIEF.md
+.claude/
+*.iml
+.idea/
+.vscode/
+.DS_Store
