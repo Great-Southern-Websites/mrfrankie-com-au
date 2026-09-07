@@ -261,3 +261,63 @@ p { margin: 0 0 1rem; }
 .map-link { margin-top: 0.75rem; }
 .page-banner h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); }
 .btn-primary:focus-visible, .btn-outline:focus-visible { outline-color: var(--ink); }
+
+/* ---- Menu pages ---------------------------------------------------------- */
+.menu-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.25rem 0 0; }
+.menu-columns { display: grid; gap: 2.5rem; align-items: start; }
+@media (min-width: 900px) { .menu-columns { grid-template-columns: 1fr 1fr; gap: 3rem 4rem; } }
+.menu-stack { display: grid; gap: 2.5rem; }
+.menu-section h2 { margin-bottom: 0.25rem; }
+.menu-note { color: var(--fg-muted); margin-bottom: 0.75rem; }
+.menu-list { list-style: none; padding: 0; margin: 0; }
+.menu-item { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.menu-list-compact .menu-item { padding: 0.5rem 0; }
+.menu-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.menu-item h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; line-height: 1.35; margin: 0; }
+.diet { font-weight: 400; font-style: italic; color: var(--primary); font-size: 0.9rem; white-space: nowrap; }
+.menu-item h3 .diet, .menu-table th .diet { white-space: normal; }
+.price { font-weight: 600; white-space: nowrap; }
+.menu-item p { margin: 0.2rem 0 0; color: var(--fg-muted); font-size: 0.95rem; }
+.menu-extra { display: flex; justify-content: space-between; gap: 1rem; }
+.menu-key { margin: 1rem 0 0; font-size: 0.9rem; color: var(--fg-muted); }
+.menu-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.menu-table th, .menu-table td { padding: 0.55rem 0; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+.menu-table thead th { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); border-bottom: 2px solid var(--line); }
+.menu-table tbody th { font-weight: 600; }
+.menu-table tbody th small { display: block; font-weight: 400; font-size: 0.9rem; color: var(--fg-muted); }
+.menu-table td { text-align: right; font-weight: 600; white-space: nowrap; padding-left: 0.75rem; width: 4rem; }
+.menu-table-extra th { font-weight: 400; font-size: 0.95rem; color: var(--fg-muted); padding-left: 1rem; }
+.menu-table-extra td { font-weight: 400; color: var(--fg-muted); }
+.menu-footnotes { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--fg-muted); font-size: 0.95rem; }
+.menu-footnotes p { margin-bottom: 0.35rem; }
+.visually-hidden { position: absolute; left: -999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---- print (the menu PDFs are made from these pages) --------------------- */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+    --bg: #FFFFFF; --bg-alt: #FFFFFF; --bg-card: #FFFFFF; --fg: #202738; --fg-muted: #4A5060; --line: #D8CEC6; --primary: #AB5634; --primary-deep: #8C4527;
+  }
+  html, body { background: #FFFFFF; color: var(--fg); font-size: 10.5pt; line-height: 1.4; }
+  .skip-link, .site-nav, .nav-toggle, .theme-toggle, .site-footer, .menu-actions { display: none !important; }
+  .site-header { position: static; border: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .site-header .bar { min-height: 0; padding-block: 0.4rem; }
+  .brand img { height: 3rem; }
+  .page-banner { border: 0; padding: 0.75rem 0 0.25rem; }
+  .page-banner h1 { font-size: 24pt; }
+  .page-banner .lead { font-size: 10pt; max-width: none; margin-bottom: 0.5rem; }
+  .page-banner .eyebrow { margin-bottom: 0.25rem; }
+  .menu-page { padding: 0.5rem 0 0; }
+  .menu-columns { grid-template-columns: 1fr 1fr; gap: 1rem 2rem; }
+  .menu-stack { gap: 1rem; }
+  .menu-section h2 { font-size: 15pt; margin-top: 0.4rem; }
+  .menu-item { padding: 0.25rem 0; break-inside: avoid; }
+  .menu-list-compact .menu-item { padding: 0.15rem 0; }
+  .menu-item h3 { font-size: 10.5pt; }
+  .menu-item p, .menu-table-extra th, .menu-table tbody th small { font-size: 9.5pt; }
+  .menu-table th, .menu-table td { padding: 0.25rem 0; }
+  .menu-table, .menu-table tr { break-inside: avoid; }
+  .menu-section h2, .menu-note { break-after: avoid; }
+  .menu-footnotes { margin-top: 0.6rem; padding-top: 0.5rem; font-size: 9pt; break-inside: avoid; }
+  .container { padding-inline: 0; }
+}
