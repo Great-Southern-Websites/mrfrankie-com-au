@@ -2,15 +2,18 @@
 <header class="site-header">
   <div class="container bar">
     <a class="brand" href="{=site.url}">
-      <!-- BUILDER: replace with the logo image (public/images/logo.*) or a wordmark -->
+      <img src="{=site.url('images/logo.png')}" alt="Mr Frankie" width="640" height="611">
       <span class="brand-name">Mr Frankie</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle menu">
     <label for="nav-toggle" class="nav-toggle"><span></span></label>
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
-        <!-- BUILDER: one <li> per page, mirroring the original site's navigation -->
         <li><a href="{=site.url}">Home</a></li>
+        <li><a href="{=site.url('about')}">About Us</a></li>
+        <li><a href="{=site.url('menus')}">Our Menus</a></li>
+        <li><a href="{=site.url('contact')}">Contact Us</a></li>
+        <li><a class="btn-book" href="mailto:bookings@mrfrankie.com.au">Book now</a></li>
       </ul>
     </nav>
   </div>
