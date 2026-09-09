@@ -143,6 +143,7 @@ p { margin: 0 0 1rem; }
 .hero { background: var(--bg-alt); color: var(--fg); padding-block: clamp(2.5rem, 7vw, 5rem); border-bottom: 1px solid var(--line); }
 .hero h1 { font-size: clamp(2.4rem, 7vw, 4rem); }
 .hero .lead { color: var(--fg-muted); }
+.hero-logo { display: block; width: clamp(11rem, 28vw, 17rem); aspect-ratio: 640 / 611; background-color: currentColor; -webkit-mask: url("../images/logo.png") no-repeat center / contain; mask: url("../images/logo.png") no-repeat center / contain; margin-bottom: 1rem; }
 .hero-address { margin: 0; color: var(--fg-muted); }
 .hero-address a { color: inherit; }
 .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
