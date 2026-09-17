@@ -1,0 +1,40 @@
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+<!-- Structured data for search engines (schema.org). Keep it accurate when
+     contact details, hours or locations change. -->
+<script type="application/ld+json">
+{|{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "@id": "|}{=site.url.absolute}{|#business",
+  "name": "Mr Frankie Cafe",
+  "url": "|}{=site.url.absolute}{|",
+  "logo": "|}{=site.url('images/logo.png').absolute}{|",
+  "image": "|}{=site.url('images/interior.jpg').absolute}{|",
+  "description": "Family owned Melbourne inspired brunch cafe at 48 Norman Avenue, Frankston South, serving Industry Beans coffee, with Mr Frankie by Night evenings.",
+  "telephone": "+61 3 8752 3149",
+  "email": "bookings@mrfrankie.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "48 Norman Avenue",
+    "addressLocality": "Frankston South",
+    "addressRegion": "VIC",
+    "postalCode": "3199",
+    "addressCountry": "AU"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "07:00", "closes": "14:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "08:00", "closes": "14:00" }
+  ],
+  "hasMenu": "|}{=site.url('menus').absolute}{|",
+  "sameAs": [
+    "https://www.instagram.com/mr.frankiecafe/",
+    "https://www.instagram.com/mrfrankiebynight/",
+    "https://www.facebook.com/mrfrankiecafe/"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Book a table",
+    "target": "|}{=site.url('contact').absolute}{|"
+  }
+}|}
+</script>

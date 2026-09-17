@@ -1,147 +1,143 @@
 ---
-title: "Mr Frankie Cafe, Frankston South"
-description: "Mr Frankie is a family owned brunch café at 48 Norman Avenue, Frankston South. Melbourne inspired food, Industry Beans coffee and locally sourced wine, created for the locals by the locals."
+title: "Mr Frankie Cafe"
+description: "Family owned Melbourne inspired brunch cafe at 48 Norman Avenue, Frankston South, serving Industry Beans coffee, with Mr Frankie by Night evenings."
+image: interior-social.jpg
 layout: default
 ---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="welcome">Welcome to</p>
+        <img class="hero-logo logo-light" src="{=site.url('images/logo.png')}" alt="Mr Frankie" width="900" height="859" data-no-zoom>
+        <img class="hero-logo logo-dark" src="{=site.url('images/logo-dark.png')}" alt="" aria-hidden="true" width="900" height="859" data-no-zoom>
+        <h1>Peace, love and Mr Frankie</h1>
+        <p class="lead">A family owned, Melbourne inspired brunch cafe, created for the locals by the locals.</p>
+        <p class="address"><a href="https://www.google.com/maps/search/?api=1&amp;query=48+Norman+Avenue+Frankston+South+VIC+3199">48 Norman Avenue, Frankston South, Victoria 3199</a></p>
+        <p class="actions">
+          <a class="btn btn-primary" href="mailto:bookings@mrfrankie.com.au">Book a table</a>
+          <a class="btn btn-outline" href="{=site.url('menus')}">Our menus</a>
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="{=site.url('images/interior.jpg')}" alt="Inside Mr Frankie: a blue banquette, a round mirror and a bowl of food with a drink on a timber table" width="1280" height="1600" fetchpriority="high">
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="board">
+        <p class="label">Opening hours</p>
+        <h2>When we are open</h2>
+        <table class="hours">
+          <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr><th scope="row">Tuesday to Saturday</th><td>7.00am to 2.30pm</td></tr>
+          <tr><th scope="row">Sunday</th><td>8.00am to 2.00pm</td></tr>
+        </table>
+      </div>
+      <div class="board">
+        <p class="label">Find us</p>
+        <h2>48 Norman Avenue</h2>
+        <p>Frankston South, Victoria 3199, Australia.<br>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=48+Norman+Avenue+Frankston+South+VIC+3199">Open in Google Maps</a></p>
+        <p>Call <a href="tel:+61387523149">(03) 8752 3149</a> or email <a href="mailto:bookings@mrfrankie.com.au">bookings@mrfrankie.com.au</a>.</p>
+        <p>Keep up to date on Instagram: <a href="https://www.instagram.com/mr.frankiecafe/" rel="noopener">@mr.frankiecafe</a> and <a href="https://www.instagram.com/mrfrankiebynight/" rel="noopener">@mrfrankiebynight</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section night" style="margin-top:clamp(3rem, 8vw, 6rem)">
+  <div class="container night-grid">
     <div>
-      <p class="eyebrow">Welcome to</p>
-      <h1><span class="hero-logo" role="img" aria-label="Mr Frankie"></span></h1>
-      <p class="lead">Peace, love and Mr Frankie. A Melbourne inspired brunch café in Frankston South, created for the locals by the locals.</p>
-      <p class="hero-address"><a href="https://www.google.com/maps/search/?api=1&amp;query=48+Norman+Avenue+Frankston+South+VIC+3199" rel="noopener">48 Norman Avenue, Frankston South, Victoria 3199</a></p>
-      <p class="hero-actions">
-        <a class="btn btn-primary" href="mailto:bookings@mrfrankie.com.au">Book a table</a>
-        <a class="btn btn-outline" href="{=site.url('menus')}">Our menus</a>
+      <p class="label">Mr Frankie by Night</p>
+      <h2>Summer 2025 dates</h2>
+      <p class="lead">Tapas, kids plates and after dinner treats from 5.00pm, with happy hour from 5.00pm to 6.00pm.</p>
+      <p class="actions">
+        <a class="btn btn-primary" href="{=site.url('menus/by-night')}">By Night menu</a>
+        <a class="btn btn-outline" href="mailto:bookings@mrfrankie.com.au">Book a table</a>
       </p>
     </div>
-    <img src="{=site.url('images/platter.jpg')}" alt="A shared platter of cured meats, cheese, olives and crackers with a glass of white wine at Mr Frankie" width="1280" height="1600">
-  </div>
-</section>
-
-<section class="section section-tight">
-  <div class="container info-grid">
-    <div class="info-card">
-      <h2>Opening hours</h2>
-      <table class="hours">
-        <tr><th scope="row">Monday</th><td>Closed</td></tr>
-        <tr><th scope="row">Tuesday to Saturday</th><td>7.00am to 2.30pm</td></tr>
-        <tr><th scope="row">Sunday</th><td>8.00am to 2.00pm</td></tr>
-      </table>
-    </div>
-    <div class="info-card">
-      <h2>Mr Frankie by Night</h2>
-      <p>Summer 2025 dates, 5.00pm to 9.00pm, with happy hour from 5.00pm to 6.00pm.</p>
-      <ul class="event-list">
-        <li>14 November</li>
-        <li>28 November</li>
-        <li>5 December</li>
-        <li>19 December</li>
+    <div>
+      <ul class="dates">
+        <li><span>Friday</span>14 November</li>
+        <li><span>Friday</span>28 November</li>
+        <li><span>Friday</span>5 December</li>
+        <li><span>Friday</span>19 December</li>
       </ul>
-      <p>Follow <a href="https://www.instagram.com/mrfrankiebynight/" rel="noopener">@mrfrankiebynight</a> on Instagram for the next dates, or see the <a href="{=site.url('menus/by-night')}">By Night menu</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container split">
-    <img src="{=site.url('images/interior.jpg')}" alt="Inside Mr Frankie: a blue banquette, timber table and round mirror under a warm wall light" width="1280" height="1600">
-    <div class="prose">
-      <p class="eyebrow">About us</p>
-      <h2>Who is Mr Frankie?</h2>
-      <p>Created for the locals by the locals, Mr Frankie is a family owned business focused on delivering the local community a little slice of Melbourne to their doorstep. With quality sourced produce, top of the range coffee from Industry Beans, locally sourced wine and warm, friendly service, along with our architecturally designed fit-out, we have created a really special atmosphere for the locals to enjoy and be proud to bring their friends from all over.</p>
-      <p><a class="btn btn-outline" href="{=site.url('about')}">Read our story</a></p>
+      <p class="night-time">5.00pm to 9.00pm</p>
+      <p class="muted">Happy hour 5.00pm to 6.00pm. Tapas, kids and after dinner menus available until 9.00pm.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container split reverse">
-    <img src="{=site.url('images/menu-by-day.jpg')}" alt="A bowl of crispy pork belly with soba noodles, cucumber, capsicum, carrot and coriander" width="1280" height="1600">
-    <div class="prose">
-      <p class="eyebrow">Our food</p>
-      <h2>For the locals by the locals</h2>
-      <p>At Mr Frankie we source quality produce and support local businesses where possible. We thrive on quality and consistency to deliver the very best every time. We cater to all dietary needs with a wide variety of gluten free and vegan options. Our menu changes seasonally, keeping it fresh and fun, with a variety of specials available daily.</p>
-      <p><a class="btn btn-outline" href="{=site.url('menus')}">See our menus</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Our menus</p>
-      <h2>By Day, By Night and Drinks</h2>
-      <p>Read each menu on the site or download it as a PDF.</p>
+      <p class="label">Our Menus</p>
+      <h2>For the locals by the locals</h2>
+      <p class="lead">Our menu changes seasonally, with a variety of specials available daily and a wide variety of gluten free and vegan options.</p>
     </div>
-    <div class="menu-grid">
-      <article class="menu-card">
-        <img src="{=site.url('images/menu-by-day.jpg')}" alt="A bowl of crispy pork belly with soba noodles and fresh vegetables" width="1280" height="1600">
-        <div class="menu-body">
-          <h3>By Day</h3>
-          <p>Brunch, sides, the kids menu and the display fridge.</p>
-          <a class="btn btn-primary" href="{=site.url('menus/by-day')}">By Day menu</a>
+    <ul class="menu-cards">
+      <li class="menu-card">
+        <img src="{=site.url('images/soba-noodle-salad.jpg')}" alt="Sticky pork and soba noodle salad with cucumber, carrot, chilli and coriander" width="1280" height="1600" loading="lazy">
+        <div class="menu-card-text">
+          <h3><a href="{=site.url('menus/by-day')}">By Day</a></h3>
+          <p>Breakfast and brunch, sides, kids menu and the display fridge.</p>
         </div>
-      </article>
-      <article class="menu-card">
-        <img src="{=site.url('images/menu-by-night.jpg')}" alt="Three crumbed arancini on a plate with a glass of white wine behind" width="1280" height="1600">
-        <div class="menu-body">
-          <h3>By Night</h3>
-          <p>Tapas, kids meals and after dinner for Mr Frankie by Night.</p>
-          <a class="btn btn-primary" href="{=site.url('menus/by-night')}">By Night menu</a>
+      </li>
+      <li class="menu-card">
+        <img src="{=site.url('images/arancini-and-wine.jpg')}" alt="Three arancini on a plate beside a glass of sparkling wine" width="1280" height="1600" loading="lazy">
+        <div class="menu-card-text">
+          <h3><a href="{=site.url('menus/by-night')}">By Night</a></h3>
+          <p>Tapas, kids plates and after dinner, from 5.00pm on By Night evenings.</p>
         </div>
-      </article>
-      <article class="menu-card">
-        <img src="{=site.url('images/menu-drinks.jpg')}" alt="A latte with heart shaped latte art in a black cup on a terracotta tiled table" width="1280" height="1600">
-        <div class="menu-body">
-          <h3>Drinks</h3>
-          <p>Hot and iced drinks, smoothies, juices and milkshakes.</p>
-          <a class="btn btn-primary" href="{=site.url('menus/drinks')}">Drinks menu</a>
+      </li>
+      <li class="menu-card">
+        <img src="{=site.url('images/coffee.jpg')}" alt="A latte in a black cup on terracotta tiles" width="1280" height="1600" loading="lazy">
+        <div class="menu-card-text">
+          <h3><a href="{=site.url('menus/drinks')}">Drinks</a></h3>
+          <p>Industry Beans coffee, chai, iced drinks, smoothies, juices and milkshakes.</p>
         </div>
-      </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split photo-right">
+    <div>
+      <p class="label">About Us</p>
+      <h2>Who is Mr Frankie?</h2>
+      <p>Created for the locals by the locals, Mr Frankie is a family owned business with a focus on delivering the local community a little slice of Melbourne to their doorstep. With quality sourced produce, top of the range coffee from Industry Beans, locally sourced wine and warm friendly service, along with our architecturally designed fit out, we have created a really special atmosphere for the locals to enjoy and be proud to bring their friends from all over.</p>
+      <p>Opened in May 2019, Mr Frankie is a Melbourne inspired cafe transformed from an old newsagency.</p>
+      <p class="actions"><a class="btn btn-outline" href="{=site.url('about')}">Read our story</a></p>
+    </div>
+    <div class="board">
+      <p class="label">Our coffee</p>
+      <h3>Industry Beans</h3>
+      <p>Mr Frankie is proud to use Industry Beans coffee. Industry Beans employ transparent and ethical sourcing policies to ensure a sustainable, quality coffee supply.</p>
+      <p><a href="{=site.url('menus/drinks')}">See the drinks menu</a></p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container feature-grid">
-    <div class="feature">
-      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 8h1a3 3 0 0 1 0 6h-1"/><path d="M4 8h13v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z"/><path d="M8 3v2M11 3v2M14 3v2"/></svg></div>
-      <h3>Our coffee</h3>
-      <p>Mr Frankie is proud to use Industry Beans coffee. Industry Beans employ transparent and ethical sourcing policies to ensure a sustainable, quality coffee supply.</p>
-    </div>
-    <div class="feature">
-      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></div>
-      <h3>Join us</h3>
-      <p>Mr Frankie is always looking for new and energetic staff. If you would like to join our team, contact us at <a href="mailto:info@mrfrankie.com.au">info@mrfrankie.com.au</a>.</p>
-    </div>
-    <div class="feature">
-      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><path d="M16.8 7.2h.01"/></svg></div>
-      <h3>Follow us</h3>
-      <p>Keep up to date with what's happening at Mr Frankie on Instagram.</p>
-      <ul class="link-list">
-        <li><a href="https://www.instagram.com/mr.frankiecafe/" rel="noopener">@mr.frankiecafe</a></li>
-        <li><a href="https://www.instagram.com/mrfrankiebynight/" rel="noopener">@mrfrankiebynight</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section cta-band">
-  <div class="container info-grid">
+  <div class="container book">
     <div>
-      <p class="eyebrow" style="color: inherit;">Bookings</p>
+      <p class="label">Bookings</p>
       <h2>Book a table</h2>
-      <p class="lead">Available for groups of 8 or more.</p>
-      <p><a href="tel:+61387523149">(03) 8752 3149</a><br><a href="mailto:bookings@mrfrankie.com.au">bookings@mrfrankie.com.au</a></p>
-      <p class="hero-actions"><a class="btn btn-primary" href="mailto:bookings@mrfrankie.com.au">Book now</a></p>
+      <p class="lead">Bookings are available for groups of 8 or more. Call or email and we will set a table aside.</p>
+      <p class="actions">
+        <a class="btn btn-primary" href="mailto:bookings@mrfrankie.com.au">Email bookings</a>
+        <a class="btn btn-outline" href="tel:+61387523149">Call (03) 8752 3149</a>
+      </p>
     </div>
-    <div>
-      <p class="eyebrow" style="color: inherit;">Do you have a question?</p>
-      <h2>Get in touch</h2>
-      <p><a href="mailto:info@mrfrankie.com.au">info@mrfrankie.com.au</a></p>
-      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=48+Norman+Avenue+Frankston+South+VIC+3199" rel="noopener">48 Norman Avenue,<br>Frankston South, Victoria 3199,<br>Australia</a></p>
-      <p class="hero-actions"><a class="btn btn-outline" href="{=site.url('contact')}">Contact us</a></p>
-    </div>
+    <ul class="contact-lines">
+      <li><a href="tel:+61387523149">(03) 8752 3149</a></li>
+      <li><a href="mailto:bookings@mrfrankie.com.au">bookings@mrfrankie.com.au</a></li>
+      <li>Do you have a question? <a href="mailto:info@mrfrankie.com.au">info@mrfrankie.com.au</a></li>
+    </ul>
   </div>
 </section>

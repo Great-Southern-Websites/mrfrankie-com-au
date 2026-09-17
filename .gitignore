@@ -1,6 +1,8 @@
 target/
 .source/
 BRIEF.md
+STYLE.md
+DIRECTION.md
 .claude/
 *.iml
 .idea/

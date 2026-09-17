@@ -2,8 +2,8 @@
 <header class="site-header">
   <div class="container bar">
     <a class="brand" href="{=site.url}">
-      <img src="{=site.url('images/logo.png')}" alt="Mr Frankie" width="640" height="611">
-      <span class="brand-name">Mr Frankie</span>
+      <img class="logo-light" src="{=site.url('images/logo.png')}" alt="Mr Frankie Cafe" width="900" height="859">
+      <img class="logo-dark" src="{=site.url('images/logo-dark.png')}" alt="" aria-hidden="true" width="900" height="859">
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle menu">
     <label for="nav-toggle" class="nav-toggle"><span></span></label>
@@ -11,7 +11,14 @@
       <ul>
         <li><a href="{=site.url}">Home</a></li>
         <li><a href="{=site.url('about')}">About Us</a></li>
-        <li><a href="{=site.url('menus')}">Our Menus</a></li>
+        <li>
+          <a href="{=site.url('menus')}">Our Menus</a>
+          <ul>
+            <li><a href="{=site.url('menus/by-day')}">By Day</a></li>
+            <li><a href="{=site.url('menus/by-night')}">By Night</a></li>
+            <li><a href="{=site.url('menus/drinks')}">Drinks</a></li>
+          </ul>
+        </li>
         <li><a href="{=site.url('contact')}">Contact Us</a></li>
         <li><a class="btn-book" href="mailto:bookings@mrfrankie.com.au">Book now</a></li>
       </ul>

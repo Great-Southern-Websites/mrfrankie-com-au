@@ -3,20 +3,32 @@ layout: default
 ---
 {@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
 {@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
-<section class="page-banner">
-  <div class="container">
-    <p class="eyebrow">Our menus</p>
-    <h1>{=page.title}</h1>
-    {#if page.description}<p class="lead">{=page.description}</p>{/if}
-    {#if page.data.pdf??}
-    <p class="menu-actions">
-      <a class="btn btn-primary" href="{=site.url(page.data.pdf)}" download>Download the {=page.title} menu (PDF)</a>
-    </p>
-    {/if}
-  </div>
-</section>
-<section class="section menu-page">
-  <div class="container">
-    {#insert /}
-  </div>
-</section>
+<div class="menu-page {=page.data.getString('menuClass', '')}">
+  <section class="container menu-intro">
+    <div>
+      <p class="label">Our Menus</p>
+      <h1>{=page.title}</h1>
+      <p class="lead">{=page.description}</p>
+      <p class="print-brand muted">Mr Frankie Cafe, 48 Norman Avenue, Frankston South. (03) 8752 3149</p>
+    </div>
+    <div>
+      <p class="actions">
+        <a class="btn btn-primary" href="{=site.url('menus/' + page.data.getString('pdf'))}" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>
+          Download PDF
+        </a>
+      </p>
+      <ul class="menu-nav" aria-label="Menus">
+        <li><a href="{=site.url('menus/by-day')}" {#if page.data.getString('menuKey') == 'day'}aria-current="page"{/if}>By Day</a></li>
+        <li><a href="{=site.url('menus/by-night')}" {#if page.data.getString('menuKey') == 'night'}aria-current="page"{/if}>By Night</a></li>
+        <li><a href="{=site.url('menus/drinks')}" {#if page.data.getString('menuKey') == 'drinks'}aria-current="page"{/if}>Drinks</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="container">
+    <div class="menu-board">
+      {#insert /}
+    </div>
+    <p class="muted no-print" style="margin-top:1.25rem;font-size:0.95rem">Bookings for groups of 8 or more: <a href="tel:+61387523149">(03) 8752 3149</a> or <a href="mailto:bookings@mrfrankie.com.au">bookings@mrfrankie.com.au</a>.</p>
+  </section>
+</div>

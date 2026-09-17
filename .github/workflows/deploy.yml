@@ -7,8 +7,22 @@ on:
     - cron: "0 19 * * *"  # 05:00 AEST daily, so future-dated posts publish
   workflow_dispatch:
 
+# One Pages deployment at a time: a second run queues behind the first instead
+# of being refused with "in progress deployment" (the elf's first push and its
+# publish commit arrive seconds apart).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
+    # The Roq action reads the site address from the Pages settings. A public
+    # repository's settings are readable by anyone; a private one (a prospect's
+    # preview) needs pages: read, and without it the action reports that Pages
+    # is not enabled.
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
