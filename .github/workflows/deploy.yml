@@ -26,10 +26,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # The address Pages serves the site at, as the Roq action would look it up. The
+      # action's own upload is off so the stylesheet can go into the pages first.
+      - name: Get the Pages address
+        id: pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url' 2>/dev/null || echo '')
+          if [[ $url != http* ]]; then
+            echo "::error::GitHub Pages is not enabled for this repository."
+            exit 1
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
       - name: Generate Roq Site
         uses: quarkiverse/quarkus-roq@v1.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-pages: 'false'
+          site-url: ${{ steps.pages.outputs.url }}
+      # A page that carries its own stylesheet can be drawn from the first file the
+      # browser receives, without a second trip to GitHub.
+      - name: Put the stylesheet in the pages
+        run: java .github/InlineStyles.java target/roq
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: target/roq
   deploy:
     environment:
       name: github-pages
