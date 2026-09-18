@@ -151,6 +151,8 @@ p { margin: 0 0 1rem; }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; position: relative; }
 .brand { display: flex; align-items: center; text-decoration: none; color: var(--fg); padding: 0.4rem 0; }
 .brand img { height: 3.4rem; width: auto; }
+.logo-mark { display: block; aspect-ratio: 1800 / 1718; height: auto; color: var(--fg); }
+.brand .logo-mark { height: 3.4rem; width: auto; }
 /* Two logos, one per theme, swapped by CSS so the theme toggle is honoured. */
 .logo-dark { display: none; }
 @media (prefers-color-scheme: dark) {
