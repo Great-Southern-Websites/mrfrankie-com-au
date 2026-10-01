@@ -1,0 +1,30 @@
+---
+title: "Book a Table"
+description: "Request a table at Mr Frankie, 48 Norman Avenue, Frankston South. Bookings are available for groups of 8 or more."
+layout: default
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+<section class="page-banner">
+  <div class="container">
+    <p class="label">Bookings</p>
+    <h1>Book a table</h1>
+    <p class="lead">Bookings are available for groups of 8 or more. Fill in the form and we will get back to you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="board" id="book">
+      <p class="label">Booking request</p>
+      <h2>Request a booking</h2>
+      {#include partials/contact-form /}
+    </div>
+    <div class="board" style="margin-top:1.25rem">
+      <p class="label">By phone</p>
+      <h2>Call the cafe</h2>
+      <p class="big"><a href="tel:+61387523149">(03) 8752 3149</a></p>
+      <p>We are at <a href="https://www.google.com/maps/search/?api=1&amp;query=48+Norman+Avenue+Frankston+South+VIC+3199">48 Norman Avenue, Frankston South</a>. For anything that is not a booking, see <a href="{=site.url('contact')}">Contact Us</a>.</p>
+    </div>
+  </div>
+</section>

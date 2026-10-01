@@ -1,6 +1,6 @@
 ---
 title: "Contact Us"
-description: "Find Mr Frankie at 48 Norman Avenue, Frankston South. Opening hours, phone, email, bookings for groups of 8 or more, and our Instagram pages."
+description: "Find Mr Frankie at 48 Norman Avenue, Frankston South. Opening hours, phone, email, how to book a table, and our Instagram pages."
 layout: default
 ---
 {@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
@@ -9,7 +9,7 @@ layout: default
   <div class="container">
     <p class="label">Contact Us</p>
     <h1>Book a table or say hello</h1>
-    <p class="lead">Bookings are available for groups of 8 or more. For anything else, email us and we will get back to you.</p>
+    <p class="lead">Bookings are available for groups of 8 or more on the <a href="{=site.url('book')}#book">booking page</a>. For anything else, email us and we will get back to you.</p>
   </div>
 </section>
 
@@ -19,10 +19,9 @@ layout: default
       <div class="board">
         <p class="label">Bookings</p>
         <h2>Book a table</h2>
-        <p>Available for groups of 8 or more.</p>
+        <p>Available for groups of 8 or more. Send us a booking request and we will get back to you.</p>
         <p class="big"><a href="tel:+61387523149">(03) 8752 3149</a></p>
-        <p class="big"><a href="mailto:bookings@mrfrankie.com.au">bookings@mrfrankie.com.au</a></p>
-        <p class="actions"><a class="btn btn-primary" href="mailto:bookings@mrfrankie.com.au">Book now</a></p>
+        <p class="actions"><a class="btn btn-primary" href="{=site.url('book')}#book">Book now</a></p>
       </div>
       <div class="board">
         <p class="label">Questions</p>
@@ -64,12 +63,6 @@ layout: default
         <p>Read the <a href="{=site.url('menus/by-day')}">By Day</a>, <a href="{=site.url('menus/by-night')}">By Night</a> and <a href="{=site.url('menus/drinks')}">Drinks</a> menus, or download each as a PDF from <a href="{=site.url('menus')}">Our Menus</a>.</p>
         <p>If you have allergies, please inform the staff when ordering.</p>
       </div>
-    </div>
-    <div class="board" style="margin-top:1.25rem">
-      <p class="label">Booking form</p>
-      <h2>Request a booking</h2>
-      <p>Fill in the form and we will get back to you.</p>
-      {#include partials/contact-form /}
     </div>
     <div class="map">
       <iframe title="Map showing Mr Frankie Cafe at 48 Norman Avenue, Frankston South" src="https://www.google.com/maps?q=48+Norman+Avenue,+Frankston+South+VIC+3199&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
