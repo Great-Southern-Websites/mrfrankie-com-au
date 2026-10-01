@@ -59,7 +59,13 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
         </dependency>
-    </dependencies>
+            <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>lit</artifactId>
+            <version>3.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+</dependencies>
     <build>
         <plugins>
             <plugin>

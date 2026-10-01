@@ -1,0 +1,17 @@
+{! The contact form plugin from Great Southern Websites. Put in place by the elf; the contact page includes it with
+   {#include partials/contact-form /}. Fields and the recipient are set by the owner in Settings, not here. Do not edit. !}
+{#bundle key="contact" tag="script" /}
+<style>{|
+.gsw-contact { max-width: 40rem; }
+.gsw-contact-field label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.gsw-contact input:not([type=checkbox]):not([type=radio]), .gsw-contact textarea, .gsw-contact select { width: 100%; box-sizing: border-box; min-height: 2.9rem; padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-card); color: var(--fg); font: inherit; }
+.gsw-contact fieldset { border: 0; margin: 0 0 1rem; padding: 0; }
+.gsw-contact legend { font-weight: 600; margin-bottom: 0.3rem; padding: 0; }
+.gsw-contact-choice label, .gsw-contact-tick label { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0 1.2rem 0.4rem 0; font-weight: 400; min-height: 2.75rem; cursor: pointer; }
+.gsw-contact-choice input, .gsw-contact-tick input { width: 1.2rem; height: 1.2rem; accent-color: var(--accent); }
+.gsw-contact input:focus-visible, .gsw-contact textarea:focus-visible, .gsw-contact select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.gsw-contact-trap { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.gsw-contact-error { color: #B42318; font-weight: 600; }
+.gsw-contact-sent { padding: 1rem 1.2rem; border-radius: var(--radius); background: var(--bg-alt); font-weight: 600; }
+|}</style>
+<gsw-contact-form site="mrfrankie-com-au" api="https://www.greatsouthern.website"></gsw-contact-form>
